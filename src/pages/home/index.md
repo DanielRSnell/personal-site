@@ -1,9 +1,9 @@
 ---
-templateKey: 'home-page'
-path: /home
+templateKey: home-page
 mainHeading: Example
 secondaryHeading: Example
-featuredImage: 
+featuredImage: /img/chemex.jpg
 description: Example
 content: Example
 ---
+
