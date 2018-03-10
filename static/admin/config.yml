@@ -39,3 +39,4 @@ collections:
           - {label: "Secondary Heading", name: "secondaryHeading", widget: "string"}
           - {label: "Featured Image", name: "featuredImage", widget: "image"}
           - {label: "Description", name: "description", widget: "text"}
+          - {label: "Content", name: "content", widget: "markdown"}

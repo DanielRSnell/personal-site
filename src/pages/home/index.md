@@ -5,4 +5,5 @@ mainHeading: Example
 secondaryHeading: Example
 featuredImage: 
 description: Example
+content: Example
 ---
