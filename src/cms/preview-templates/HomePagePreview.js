@@ -4,7 +4,7 @@ import { HomePageTemplate } from "../../templates/home-page";
 const HomePagePreview = ({ entry, widgetFor }) => (
   <HomePageTemplate
     title={entry.getIn(["data", "mainHeading"])}
-    content={widgetFor("body")}
+    content={widgetFor("content")}
   />
 );
 
