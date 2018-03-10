@@ -1,5 +1,8 @@
 ---
 templateKey: 'home-page'
 path: /home
-title: Hello, I'm Daniel Snell - Full Stack Developer and Growth Expert
+mainHeading: Example
+secondaryHeading: Example
+featuredImage: 
+description: Example
 ---
