@@ -34,8 +34,6 @@ collections:
 
   - name: "pages"
     label: "Pages"
-    create: true
-    slug: "{{slug}}"
     files:
       - file: "src/pages/about"
         label: "About"
