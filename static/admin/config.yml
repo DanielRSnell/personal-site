@@ -35,8 +35,8 @@ collections:
         name: "home"
         fields: 
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page"}
-          - {label: "Primary Heading", name: "mainHeading", widget: "string"}
-          - {label: "Secondary Heading", name: "secondaryHeading", widget: "string"}
+          - {label: "Heading", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Featured Image", name: "featuredImage", widget: "image"}
           - {label: "Description", name: "description", widget: "text"}
           - {label: "Content", name: "content", widget: "markdown"}
