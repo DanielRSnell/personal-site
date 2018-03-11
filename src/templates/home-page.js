@@ -43,7 +43,6 @@ export const homePageQuery = graphql`
         subtitle
         featuredImage
         description
-        body
       }
     }
   }
