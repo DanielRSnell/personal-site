@@ -41,6 +41,10 @@ export const homePageQuery = graphql`
       html
       frontmatter {
         title
+        subtitle
+        featuredImage
+        description
+        content
       }
     }
   }
