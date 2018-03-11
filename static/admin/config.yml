@@ -39,4 +39,4 @@ collections:
           - {label: "Subtitle", name: "subtitle", widget: "string"}
           - {label: "Featured Image", name: "featuredImage", widget: "image"}
           - {label: "Description", name: "description", widget: "text"}
-          - {label: "Content", name: "content", widget: "markdown"}
+          - {label: "Body", name: "body", widget: "markdown"}
