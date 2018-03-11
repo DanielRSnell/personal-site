@@ -7,7 +7,7 @@ description: Example
 ---
 # We wanted to make something...
 
-![coffee](/img/coffee.png)
+![coffee](/img/chemex.jpg)
 
 Something goes here.
 
@@ -23,5 +23,4 @@ const HomePagePreview = ({ entry, widgetFor }) => (
 );
 
 export default HomePagePreview;
-
 ```
