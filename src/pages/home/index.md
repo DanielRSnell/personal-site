@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
-mainHeading: Example
-secondaryHeading: Example
+title: Example
+subtitle: Example
 featuredImage: /img/chemex.jpg
 description: Example
 content: Exampleasd
