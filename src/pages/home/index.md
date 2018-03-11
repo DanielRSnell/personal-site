@@ -7,8 +7,6 @@ description: Example
 ---
 # We wanted to make something...
 
-![coffee](/img/chemex.jpg)
-
 Something goes here.
 
 ```
