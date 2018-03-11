@@ -10,3 +10,5 @@ description: Example
 ![coffee](/img/coffee.png)
 
 Something goes here.
+
+`<h2>Something else goes here</h2>`
