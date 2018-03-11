@@ -1,1 +1,8 @@
+// BASE
+@import "./base/_util";
+@import "./base/_base.scss";
+
+@import "./components/home";
+
+// 3RD PARTY
 @import "~bulma";

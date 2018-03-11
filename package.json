@@ -5,6 +5,7 @@
   "author": "Austin Green",
   "dependencies": {
     "bulma": "^0.6.0",
+    "font-awesome": "^4.7.0",
     "gatsby": "^1.9.213",
     "gatsby-link": "^1.6.37",
     "gatsby-plugin-netlify-cms": "^1.0.9",
@@ -17,9 +18,12 @@
     "gatsby-transformer-sharp": "^1.6.21",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-fontawesome": "^1.6.1",
     "react-helmet": "^5.2.0"
   },
-  "keywords": ["gatsby"],
+  "keywords": [
+    "gatsby"
+  ],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -28,10 +32,8 @@
     "develop": "gatsby develop",
     "serve": "gatsby serve",
     "master:pull": "git pull origin",
-    "master:push":
-      "git add . && git commit -m 'master push' && git push origin master",
-    "format":
-      "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "master:push": "git add . && git commit -m 'master push' && git push origin master",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {

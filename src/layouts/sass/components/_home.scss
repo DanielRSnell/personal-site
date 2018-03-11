@@ -1,0 +1,107 @@
+.featured {
+  height: 35vh;
+
+  &__image {
+    background: linear-gradient(-45deg, rgb(255, 95, 109), rgb(255, 195, 113))
+      0% 0% / cover;
+    height: 100%;
+  }
+
+  &__heading {
+    &--primary {
+      color: #eee;
+      font-size: 4rem;
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    &--secondary {
+      position: absolute;
+      top: 22.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: lighter;
+    }
+  }
+
+  &__nav {
+    background: rgb(49, 61, 62);
+    height: 2.5rem;
+  }
+
+  &__social {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    &--item {
+      padding: 2rem;
+      font-size: 2rem;
+      &--twitter {
+        &:hover {
+          color: #1dcaff;
+          transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+      }
+      &--linkedin {
+        &:hover {
+          color: #00a0dc;
+          transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+      }
+      &--github {
+        &:hover {
+          color: #9400d3;
+          transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  &-end {
+    padding-left: 1rem;
+    padding-top: 0.75rem;
+  }
+  &-item {
+    height: 1rem;
+    &:hover {
+      transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+    }
+    &--white {
+      color: #eee;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      transition: all 0.2s;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+}
+
+.personal {
+  position: relative;
+  &__image {
+    display: inline-block;
+    width: 60%;
+    z-index: 1;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+  }
+  &__heading {
+    font-size: 3rem;
+  }
+  &__secondary {
+    font-size: 1.25rem;
+    color: slategrey;
+    text-transform: uppercase;
+  }
+}

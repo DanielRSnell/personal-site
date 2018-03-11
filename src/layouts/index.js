@@ -4,10 +4,10 @@ import Helmet from "react-helmet";
 
 import Navbar from "../components/Navbar";
 import "./sass/main.scss";
+import "font-awesome/css/font-awesome.min.css";
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet title="Daniel Snell - Full Stack Develop and Growth Expert" />
-    <Navbar />
     <div>{children()}</div>
   </div>
 );
