@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
-title: Example
-subtitle: Example
+title: 'Hi, I''m Daniel Snell'
+subtitle: Growth Expert and Aspiring Full Stack Developer
 featuredImage: /img/chemex.jpg
 description: Example
 ---
