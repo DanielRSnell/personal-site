@@ -25,7 +25,6 @@ export const HomePageTemplate = ({ title, content, contentComponent }) => {
 export default ({ data }) => {
   const { markdownRemark: post } = data;
   console.log(data);
-  console.log(homePageQuery);
   return (
     <HomePageTemplate
       contentComponent={HTMLContent}
@@ -44,7 +43,7 @@ export const homePageQuery = graphql`
         subtitle
         featuredImage
         description
-        content
+        body
       }
     }
   }

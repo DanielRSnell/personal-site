@@ -4,5 +4,5 @@ title: Example
 subtitle: Example
 featuredImage: /img/chemex.jpg
 description: Example
-body:
+body: Example
 ---
