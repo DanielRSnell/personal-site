@@ -29,9 +29,9 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
     result.data.allMarkdownRemark.edges.forEach(edge => {
       const value = edge.node.frontmatter.templateKey;
       if (
-        value !== "home-page" ||
-        value !== "cert-post" ||
-        value !== "job-post" ||
+        value !== "home-page" &&
+        value !== "cert-post" &&
+        value !== "job-post" &&
         value !== "project-post"
       ) {
         const id = edge.node.id;
