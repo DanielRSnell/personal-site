@@ -2,16 +2,15 @@ import React, { Component } from "react";
 
 class Card extends Component {
   render() {
-    const data = this.props.posts.edges;
+    const data = this.props.posts;
     const image = this.props.image;
-    console.log(this.props);
     return (
       <div className="post__section">
         <div className="post__heading u-margin-bottom-micro">
           <span className="post__title">Recent Medium Posts</span>
         </div>
         <div className="columns">
-          {data.map(item => (
+          {data.edges.map(item => (
             <div className="column" key={item.node.id}>
               <div className="column__item">
                 <a
