@@ -10,7 +10,7 @@ class Card extends Component {
           <span className="post__title">Recent Medium Posts</span>
         </div>
         <div className="columns">
-          {data.edges.map(item => (
+          {data.map(item => (
             <div className="column" key={item.node.id}>
               <div className="column__item">
                 <a
