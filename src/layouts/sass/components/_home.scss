@@ -26,6 +26,7 @@
       text-align: center;
       font-size: 1.5rem;
       font-weight: lighter;
+      text-transform: uppercase;
     }
   }
 
@@ -41,6 +42,7 @@
     transform: translate(-50%, -50%);
     text-align: center;
     &--item {
+      color: rgb(49, 61, 62);
       padding: 2rem;
       font-size: 2rem;
       &--twitter {
@@ -58,6 +60,12 @@
       &--github {
         &:hover {
           color: #9400d3;
+          transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+        }
+      }
+      &--medium {
+        &:hover {
+          color: green;
           transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
         }
       }
@@ -89,8 +97,12 @@
 
 .personal {
   position: relative;
+  margin-top: 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   &__image {
     display: inline-block;
+    margin-left: 7rem;
     width: 60%;
     z-index: 1;
     -webkit-clip-path: circle(50% at 50% 50%);
@@ -102,6 +114,27 @@
   &__secondary {
     font-size: 1.25rem;
     color: slategrey;
+    text-transform: uppercase;
+  }
+  &__content {
+    line-height: 1.75rem;
+  }
+}
+
+.column__item {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  box-shadow: 0 1px #ffffff inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+}
+
+.post {
+  &__heading {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+  &__title {
+    font-size: 3rem;
+    border-bottom-style: solid;
     text-transform: uppercase;
   }
 }

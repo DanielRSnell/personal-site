@@ -1,100 +1,48 @@
 import React from "react";
 import Content, { HTMLContent } from "../components/Content";
-import Link from "gatsby-link";
-import FontAwesome from "react-fontawesome";
+import Personal from "../components/home/personal";
+import Featured from "../components/home/featured";
+import MediumPosts from "../components/home/posts";
 
 export const HomePageTemplate = ({
   title,
   content,
   contentComponent,
   subtitle,
-  featured
+  featured,
+  preview,
+  info
 }) => {
   const PageContent = contentComponent || Content;
 
   return (
     <div className="core">
-      <section className="featured">
-        <div className="featured__image">
-          <div className="featured__image">
-            <h1 className="featured__heading--primary">{title}</h1>
-            <h2 className="featured__heading--secondary">{subtitle}</h2>
-            <div className="featured__social">
-              <span className="featured__social--item">
-                <FontAwesome
-                  name="github-square"
-                  className="featured__social--item--github"
-                />
-              </span>
-              <span className="featured__social--item">
-                <FontAwesome
-                  name="twitter-square"
-                  className="featured__social--item--twitter"
-                />
-              </span>
-              <span className="featured__social--item">
-                <FontAwesome
-                  name="linkedin-square"
-                  className="featured__social--item--linkedin"
-                />
-              </span>
-            </div>
-          </div>
-        </div>
-        <div className="featured__nav">
-          <div className="navbar-end">
-            <Link to={"/about"} className="navbar-item">
-              <span className="navbar-item--white"> About </span>
-            </Link>
-            <Link to={"/resume"} className="navbar-item">
-              <span className="navbar-item--white"> Resume </span>
-            </Link>
-            <Link to={"/blog"} className="navbar-item">
-              <span className="navbar-item--white"> Blog </span>
-            </Link>
-            <Link to={"/projects"} className="navbar-item">
-              <span className="navbar-item--white"> Projects </span>
-            </Link>
-          </div>
-        </div>
-      </section>
-      <section className="personal u-margin-top-large">
-        <div className="columns">
-          <div className="column">
-            <div className="personal__photo">
-              <center>
-                {" "}
-                <img src={featured} className="personal__image" />
-              </center>
-            </div>
-          </div>
-          <div className="column">
-            <div className="personal__about">
-              <div className="personal__heading">About Me</div>
-              <div className="personal__secondary u-margin-top-micro">
-                Once developer, then data scienst, now Developer.
-              </div>
-              <p className="personal__content u-margin-top-micro">
-                I started in technology 7 years ago.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Featured data={info} />
+      <Personal data={info} />
+      <MediumPosts preview={preview} featured={featured} />
     </div>
   );
 };
 
 export default ({ data }) => {
   const { markdownRemark: post } = data;
-  console.log(data);
+  const fields = post.frontmatter;
+  const preview = data.allMediumPost.edges;
   return (
     <HomePageTemplate
       contentComponent={HTMLContent}
-      title={post.frontmatter.title}
-      subtitle={post.frontmatter.subtitle}
+      title={fields.title}
+      subtitle={fields.subtitle}
       content={post.html}
-      featured={post.frontmatter.featuredImage}
+      featured={fields.featuredImage}
+      github={fields.github}
+      twitter={fields.twitter}
+      linkedin={fields.linkedin}
+      description={fields.description}
+      biline={fields.biline}
+      preview={preview}
+      info={fields}
+      data={data}
     />
   );
 };
@@ -108,6 +56,35 @@ export const homePageQuery = graphql`
         subtitle
         featuredImage
         description
+        biline
+        github
+        twitter
+        linkedin
+      }
+    }
+    allMediumPost(limit: 3) {
+      edges {
+        node {
+          id
+          title
+          slug
+          content {
+            subtitle
+            metaDescription
+          }
+          virtuals {
+            previewImage {
+              imageId
+              filter
+              backgroundSize
+              originalWidth
+              originalHeight
+              strategy
+              height
+              width
+            }
+          }
+        }
       }
     }
   }
