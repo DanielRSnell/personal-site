@@ -1,65 +1,67 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React, { Component } from "react";
+import Link from "gatsby-link";
+import Personal from "../components/home/personal";
+import Featured from "../components/home/featured";
+import MediumPosts from "../components/home/posts";
 
-export default class IndexPage extends React.Component {
+class IndexPage extends Component {
   render() {
-    const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-
+    const data = this.props;
+    const info = this.props.data.markdownRemark.frontmatter;
+    const preview = this.props.data.allMediumPost;
+    console.log(preview);
+    const featured = this.props.data.markdownRemark.frontmatter.featuredImage;
     return (
-      <section className="section">
-        <div className="container">
-          <div className="content">
-            <h1 className="has-text-weight-bold is-size-2">Latest Stories</h1>
-          </div>
-          {posts
-            .filter(post => post.node.frontmatter.templateKey === 'blog-post')
-            .map(({ node: post }) => (
-              <div
-                className="content"
-                style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
-                key={post.id}
-              >
-                <p>
-                  <Link className="has-text-primary" to={post.fields.slug}>
-                    {post.frontmatter.title}
-                  </Link>
-                  <span> &bull; </span>
-                  <small>{post.frontmatter.date}</small>
-                </p>
-                <p>
-                  {post.excerpt}
-                  <br />
-                  <br />
-                  <Link className="button is-small" to={post.fields.slug}>
-                    Keep Reading →
-                  </Link>
-                </p>
-              </div>
-            ))}
-        </div>
-      </section>
-    )
+      <div className="core">
+        <Featured data={info} />
+        <Personal data={info} />
+        <MediumPosts data={preview} featured={featured} />
+      </div>
+    );
   }
 }
 
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+export default IndexPage;
+
+export const homePageQuery = graphql`
+  query Home {
+    markdownRemark(frontmatter: { templateKey: { eq: "home-page" } }) {
+      html
+      frontmatter {
+        title
+        subtitle
+        featuredImage
+        description
+        biline
+        github
+        twitter
+        linkedin
+      }
+    }
+    allMediumPost(limit: 3) {
       edges {
         node {
-          excerpt(pruneLength: 400)
           id
-          fields {
-            slug
+          title
+          slug
+          content {
+            subtitle
+            metaDescription
           }
-          frontmatter {
-            title
-            templateKey
-            date(formatString: "MMMM DD, YYYY")
+          virtuals {
+            previewImage {
+              imageId
+              filter
+              backgroundSize
+              originalWidth
+              originalHeight
+              strategy
+              height
+              width
+            }
           }
         }
       }
     }
   }
-`
+`;

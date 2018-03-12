@@ -3,8 +3,8 @@ import Card from "./post-card";
 
 class MediumPosts extends Component {
   render() {
-    const preview = this.props.preview;
     const featured = this.props.featured;
+    const preview = this.props.data;
     return (
       <section className="posts u-margin-top-medium u-margin-bottom-micro">
         <div className="posts__heading">

@@ -2,8 +2,9 @@ import React, { Component } from "react";
 
 class Card extends Component {
   render() {
-    const data = this.props.posts;
+    const data = this.props.posts.edges;
     const image = this.props.image;
+    console.log(this.props);
     return (
       <div className="post__section">
         <div className="post__heading u-margin-bottom-micro">
