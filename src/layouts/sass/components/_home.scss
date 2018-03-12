@@ -65,7 +65,7 @@
       }
       &--medium {
         &:hover {
-          color: green;
+          color: #00ab6c;
           transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
         }
       }
@@ -117,6 +117,7 @@
     text-transform: uppercase;
   }
   &__content {
+    margin-right: 3rem;
     line-height: 1.75rem;
   }
 }
