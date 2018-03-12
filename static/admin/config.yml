@@ -27,10 +27,10 @@ collections:
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "job-post"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "Company", name: "company", widget: "string"}
+      - {label: "Company Logo", name: "logo", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-
 
   - name: "certs"
     label: "Certs"
@@ -39,10 +39,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "cert-post"}
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "School Logo", name: "logo", widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
 
   - name: "project"
     label: "Projects"
@@ -54,7 +54,9 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Technology Used 1", name: "tech_1", widget: "image"}
+      - {label: "Technology Used 2", name: "tech_2", widget: "image"}
+      - {label: "Technology Used 3", name: "tech_3", widget: "image"}
 
 
   - name: "pages"
