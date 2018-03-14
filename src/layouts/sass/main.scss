@@ -1,8 +1,10 @@
 // BASE
 @import "./base/_util";
-@import "./base/_base.scss";
+@import "./base/_base";
 
-@import "./components/home";
+@import "./components/featured";
+@import "./components/navbar";
+@import "./components/personal";
+@import "./components/_footer";
 
 // 3RD PARTY
-@import "~bulma";

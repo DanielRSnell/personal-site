@@ -39,22 +39,6 @@ class Featured extends Component {
             </div>
           </div>
         </div>
-        <div className="featured__nav">
-          <div className="navbar-end">
-            <Link to={"/about"} className="navbar-item">
-              <span className="navbar-item--white"> About </span>
-            </Link>
-            <Link to={"/resume"} className="navbar-item">
-              <span className="navbar-item--white"> Resume </span>
-            </Link>
-            <Link to={"/blog"} className="navbar-item">
-              <span className="navbar-item--white"> Blog </span>
-            </Link>
-            <Link to={"/projects"} className="navbar-item">
-              <span className="navbar-item--white"> Projects </span>
-            </Link>
-          </div>
-        </div>
       </section>
     );
   }

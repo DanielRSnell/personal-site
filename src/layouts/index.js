@@ -9,6 +9,11 @@ const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet title="Daniel Snell - Full Stack Develop and Growth Expert" />
     <div>{children()}</div>
+    <footer className="footer">
+      <p className="footer__content">
+        Daniel Snell 2018 &copy; This site was built by Unicorns.
+      </p>
+    </footer>
   </div>
 );
 

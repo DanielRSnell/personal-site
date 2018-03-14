@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Link from "gatsby-link";
 import Personal from "../components/home/personal";
 import Featured from "../components/home/featured";
-import MediumPosts from "../components/home/posts";
-
+import Navbar from "../components/home/navbar";
 class IndexPage extends Component {
   render() {
     const data = this.props;
@@ -14,8 +13,8 @@ class IndexPage extends Component {
     return (
       <div className="core">
         <Featured data={info} />
+        <Navbar />
         <Personal data={info} />
-        <MediumPosts data={preview} featured={featured} />
       </div>
     );
   }

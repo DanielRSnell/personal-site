@@ -38,6 +38,18 @@ module.exports = {
       options: {
         username: `@SavvyHustler`
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto`, `source sans`]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Montserrat`, `source sans`]
+      }
     }
   ]
 };
