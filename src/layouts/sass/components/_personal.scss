@@ -53,6 +53,10 @@
     font-weight: bold;
     font-family: sans-serif;
     color: #36393b;
+
+    @media (max-width: 450px) {
+      font-size: 2.25rem;
+    }
   }
 
   &__secondary {
@@ -64,10 +68,18 @@
       font-weight: bold;
       font-family: sans-serif;
     }
+
+    @media (max-width: 450px) {
+      font-size: 0.8rem;
+    }
   }
 
   &__content {
     line-height: 1.5rem;
     font-size: 1rem;
+
+    @media (max-width: 450px) {
+      font-size: 0.8rem;
+    }
   }
 }
