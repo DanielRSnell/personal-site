@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar";
 import "./sass/main.scss";
 import "font-awesome/css/font-awesome.min.css";
 const TemplateWrapper = ({ children }) => (
-  <div>
+  <div className="core">
     <Helmet title="Daniel Snell - Full Stack Develop and Growth Expert" />
     <div>{children()}</div>
     <footer className="footer">
